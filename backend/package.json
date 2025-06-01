@@ -1,0 +1,33 @@
+{
+  "name": "weblarek_backend",
+  "version": "1.0.0",
+  "description": "< Добавьте описание проекта в свободной форме >",
+  "main": "dist/app.js",
+  "scripts": {
+    "lint": "npx eslint src/**/*.ts",
+    "build": "tsc",
+    "dev": "npx nodemon -L src/app.ts ",
+    "start": "ts-node src/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "< Укажите здесь автора работы >",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
+    "@types/validator": "^13.11.9",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.3.2",
+    "validator": "^13.11.0"
+  }
+}

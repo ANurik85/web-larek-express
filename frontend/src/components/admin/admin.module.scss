@@ -1,0 +1,49 @@
+.admin {
+	&__container {
+		@include mixins.container(45px,45px);
+	}
+	&__products {
+		@include mixins.flex(column);
+	}
+	&__title {
+		font-size: $titleFontSize;
+	}
+
+	&__header {
+		@include mixins.flex(row);
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__button {
+		align-self: flex-start;
+
+		&_alt {
+			@include mixins.button(white, $primaryLight, $primaryLight);
+			border: $defaultBorder;
+			margin-left: auto;
+			&:hover {
+				border: $hoverBorder;
+			}
+		}
+	}
+	
+	&__buttons {
+		@include mixins.flex(row);
+	}
+
+
+	&__file {	
+		@include mixins.button(white, $primaryLight, $primaryLight);
+		border: $defaultBorder;
+		&:hover {
+			border: $hoverBorder;
+		}
+	}
+}
+
+
+.label__price {
+	align-self: flex-start;
+	width: 50%;
+}

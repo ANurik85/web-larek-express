@@ -1,0 +1,40 @@
+name: Tests 13 sprint
+
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '**'
+env:
+  DIR_TESTS: /tmp/tests-web-larek-express
+  REP_TESTS: https://github.com/Yandex-Practicum/tests-web-larek-express.git
+jobs:
+  test_backend:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up GitHub Actions
+      uses: actions/checkout@v4
+    - name: Use Node.js 18.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18.x
+    - name: Get testing lib
+      run: set -eu && git clone --depth 1 $REP_TESTS $DIR_TESTS
+    - name: Run tests
+      run: bash $DIR_TESTS/bin/backend.sh
+  test_endpoints:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up GitHub Actions
+      uses: actions/checkout@v4
+    - name: Use Node.js 18.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18.x
+    - name: Get testing lib
+      run: set -eu && git clone --depth 1 $REP_TESTS $DIR_TESTS
+    - name: Start project
+      run: bash $DIR_TESTS/bin/start_project.sh
+    - name: Run tests
+      run: bash $DIR_TESTS/bin/endpoints.sh
