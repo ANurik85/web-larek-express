@@ -1,0 +1,102 @@
+[
+  {
+    "description": "Если планируете решать задачи в тренажёре, берите два.",
+    "image": {
+      "fileName": "/images/5_Dots.png",
+      "originalName": "5_Dots.png"
+    },
+    "title": "+1 час в сутках",
+    "category": "софт-скил",
+    "price": 750
+  },
+  {
+    "description": "Лизните этот леденец, чтобы мгновенно запоминать и узнавать любой цветовой код CSS.",
+    "image": {
+      "fileName": "/images/Shell.png",
+      "originalName": "Shell.png"
+    },
+    "title": "HEX-леденец",
+    "category": "другое",
+    "price": 1450
+  },
+  {
+    "description": "Будет стоять над душой и не давать прокрастинировать.",
+    "image": {
+      "fileName": "/images/Asterisk_2.png",
+      "originalName": "Asterisk_2.png"
+    },
+    "title": "Мамка-таймер",
+    "category": "софт-скил",
+    "price": null
+  },
+  {
+    "description": "Откройте эти куки, чтобы узнать, какой фреймворк вы должны изучить дальше.",
+    "image": {
+      "fileName": "/images/Soft_Flower.png",
+      "originalName": "Soft_Flower.png"
+    },
+    "title": "Фреймворк куки судьбы",
+    "category": "дополнительное",
+    "price": 2500
+  },
+  {
+    "description": "Если орёт кот, нажмите кнопку.",
+    "image": {
+      "fileName": "/images/mute-cat.png",
+      "originalName": "mute-cat.png"
+    },
+    "title": "Кнопка «Замьютить кота»",
+    "category": "кнопка",
+    "price": 2000
+  },
+  {
+    "description": "Чтобы научиться правильно называть модификаторы, без этого не обойтись.",
+    "image": {
+      "fileName": "/images/Pill.png",
+      "originalName": "Pill.png"
+    },
+    "title": "БЭМ-пилюлька",
+    "category": "другое",
+    "price": 1500
+  },
+  {
+    "description": "Измените локацию для поиска работы.",
+    "image": {
+      "fileName": "/images/Polygon.png",
+      "originalName": "Polygon.png"
+    },
+    "title": "Портативный телепорт",
+    "category": "другое",
+    "price": 100000
+  },
+  {
+    "description": "Даст время для изучения React, ООП и бэкенда",
+    "image": {
+      "fileName": "/images/Butterfly.png",
+      "originalName": "Butterfly.png"
+    },
+    "title": "Микровселенная в кармане",
+    "category": "другое",
+    "price": 750
+  },
+  {
+    "description": "Очень полезный навык для фронтендера. Без шуток.",
+    "image": {
+      "fileName": "/images/Leaf.png",
+      "originalName": "Leaf.png"
+    },
+    "title": "UI/UX-карандаш",
+    "category": "хард-скил",
+    "price": 10000
+  },
+  {
+    "description": "Сжимайте мячик, чтобы снизить стресс от тем по бэкенду.",
+    "image": {
+      "fileName": "/images/Mithosis.png",
+      "originalName": "Mithosis.png"
+    },
+    "title": "Бэкенд-антистресс",
+    "category": "другое",
+    "price": 1000
+  }
+]

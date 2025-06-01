@@ -1,0 +1,2470 @@
+{
+	"info": {
+		"_postman_id": "023f1714-ea67-46c2-b11b-4b3c0f94b254",
+		"name": "WebLarek",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9866059"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "Get product list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/product/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/product/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2723"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa3-y+wJfqV/fdEJPP9Np/+WEJUYAdk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 19:45:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"items\": [\n        {\n            \"image\": {\n                \"fileName\": \"/images/5_Dots.png\",\n                \"originalName\": \"5_Dots.png\"\n            },\n            \"_id\": \"66601a7857ecac94459696d0\",\n            \"title\": \"+1 час в сутках\",\n            \"category\": \"софт-скил\",\n            \"description\": \"Если планируете решать задачи в тренажёре, берите два.\",\n            \"price\": 750\n        },\n        {\n            \"image\": {\n                \"fileName\": \"/images/Shell.png\",\n                \"originalName\": \"Shell.png\"\n            },\n            \"_id\": \"66601a8657ecac94459696d4\",\n            \"title\": \"HEX-леденец\",\n            \"category\": \"другое\",\n            \"description\": \"Лизните этот леденец, чтобы мгновенно запоминать и узнавать любой цветовой код CSS.\",\n            \"price\": 1450\n        },\n        {\n            \"image\": {\n                \"fileName\": \"/images/Asterisk_2.png\",\n                \"originalName\": \"Asterisk_2.png\"\n            },\n            \"_id\": \"66601a8c57ecac94459696d6\",\n            \"title\": \"Мамка-таймер\",\n            \"category\": \"софт-скил\",\n            \"description\": \"Будет стоять над душой и не давать прокрастинировать.\",\n            \"price\": null\n        },\n        {\n            \"image\": {\n                \"fileName\": \"/images/Soft_Flower.png\",\n                \"originalName\": \"Soft_Flower.png\"\n            },\n            \"_id\": \"66601a9757ecac94459696da\",\n            \"title\": \"Фреймворк куки судьбы\",\n            \"category\": \"дополнительное\",\n            \"description\": \"Откройте эти куки, чтобы узнать, какой фреймворк вы должны изучить дальше.\",\n            \"price\": 2500\n        },\n        {\n            \"image\": {\n                \"fileName\": \"/images/mute-cat.png\",\n                \"originalName\": \"mute-cat.png\"\n            },\n            \"_id\": \"66601a9d57ecac94459696dc\",\n            \"title\": \"Кнопка «Замьютить кота»\",\n            \"category\": \"кнопка\",\n            \"description\": \"Если орёт кот, нажмите кнопку.\",\n            \"price\": 2000\n        },\n        {\n            \"image\": {\n                \"fileName\": \"/images/Pill.png\",\n                \"originalName\": \"Pill.png\"\n            },\n            \"_id\": \"66601aa557ecac94459696de\",\n            \"title\": \"БЭМ-пилюлька\",\n            \"category\": \"другое\",\n            \"description\": \"Чтобы научиться правильно называть модификаторы, без этого не обойтись.\",\n            \"price\": 1500\n        },\n        {\n            \"image\": {\n                \"fileName\": \"/images/Polygon.png\",\n                \"originalName\": \"Polygon.png\"\n            },\n            \"_id\": \"66601aae57ecac94459696e0\",\n            \"title\": \"Портативный телепорт\",\n            \"category\": \"другое\",\n            \"description\": \"Измените локацию для поиска работы.\",\n            \"price\": 100000\n        },\n        {\n            \"image\": {\n                \"fileName\": \"/images/Butterfly.png\",\n                \"originalName\": \"Butterfly.png\"\n            },\n            \"_id\": \"66601ab757ecac94459696e2\",\n            \"title\": \"Микровселенная в кармане\",\n            \"category\": \"другое\",\n            \"description\": \"Даст время для изучения React, ООП и бэкенда\",\n            \"price\": 750\n        },\n        {\n            \"image\": {\n                \"fileName\": \"/images/Leaf.png\",\n                \"originalName\": \"Leaf.png\"\n            },\n            \"_id\": \"66601ac557ecac94459696e6\",\n            \"title\": \"UI/UX-карандаш\",\n            \"category\": \"хард-скил\",\n            \"description\": \"Очень полезный навык для фронтендера. Без шуток.\",\n            \"price\": 10000\n        },\n        {\n            \"image\": {\n                \"fileName\": \"/images/Mithosis.png\",\n                \"originalName\": \"Mithosis.png\"\n            },\n            \"_id\": \"66601ac957ecac94459696e8\",\n            \"title\": \"Бэкенд-антистресс\",\n            \"category\": \"другое\",\n            \"description\": \"Сжимайте мячик, чтобы снизить стресс от тем по бэкенду.\",\n            \"price\": 1000\n        }\n    ],\n    \"total\": 10\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Сжимайте мячик, чтобы снизить стресс от тем по бэкенду.\",\r\n    \"image\": {\r\n      \"fileName\": \"/images/Mithosis.png\",\r\n      \"originalName\": \"Mithosis.png\"\r\n    },\r\n    \"title\": \"Бэкенд-антистресс\",\r\n    \"category\": \"другое\",\r\n    \"price\": 1000\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/product",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"Откройте эти куки, чтобы узнать, какой фреймворк вы должны изучить дальше.\",\r\n    \"image\": \"/images/Soft_Flower.png\",\r\n    \"title\": \"Фреймворк куки судьбы\",\r\n    \"category\": \"дополнительное\",\r\n    \"price\": 2500\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "262"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"106-tQhoH+yYIBbNE2UOGvU1poblMkY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 19:45:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Бэкенд-антистресс\",\n    \"image\": {\n        \"fileName\": \"/images/Mithosis.png\",\n        \"originalName\": \"Mithosis.png\"\n    },\n    \"category\": \"другое\",\n    \"description\": \"Сжимайте мячик, чтобы снизить стресс от тем по бэкенду.\",\n    \"price\": 1000,\n    \"_id\": \"66601ac957ecac94459696e8\"\n}"
+						},
+						{
+							"name": "BadRequest",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"Откройте эти куки, чтобы узнать, какой фреймворк вы должны изучить дальше.\",\r\n    \"image\": \"/images/Soft_Flower.png\",\r\n    \"category\": \"дополнительное\",\r\n    \"price\": 2500\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"statusCode\": 400,\r\n    \"error\": \"Bad Request\",\r\n    \"message\": \"Validation failed\",\r\n    \"validation\": {\r\n        \"body\": {\r\n            \"source\": \"body\",\r\n            \"keys\": [\r\n                \"title\"\r\n            ],\r\n            \"message\": \"\\\"title\\\" is required\"\r\n        }\r\n    }\r\n}"
+						},
+						{
+							"name": "Conflict",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"Откройте эти куки, чтобы узнать, какой фреймворк вы должны изучить дальше.\",\r\n    \"image\": \"/images/Soft_Flower.svg\",\r\n    \"title\": \"Фреймворк куки судьбы\",\r\n    \"category\": \"дополнительное\",\r\n    \"price\": 2500\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"E11000 duplicate key error collection: weblarek.products index: title_1 dup key: { title: \\\"Фреймворк куки судьбы\\\" }\"\n}"
+						}
+					]
+				},
+				{
+					"name": "*Update product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Сжимайте мячик, чтобы снизить стресс от тем по бэкенду.\",\r\n    \"image\": {\r\n      \"fileName\": \"/images/Mithosis.png\",\r\n      \"originalName\": \"Mithosis.png\"\r\n    },\r\n    \"title\": \"Бэкенд-антистресс\",\r\n    \"category\": \"другое\",\r\n    \"price\": 1000\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/product/6659c9d98ec8873e16cc23b4",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"6659c9d98ec8873e16cc23b4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "Чтобы научиться правильно называть модификаторы, без этого не обойтись.",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "БЭМ-пилюлька",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "category",
+											"value": "другое",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "1500",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product/6659c9d98ec8873e16cc23b4",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"6659c9d98ec8873e16cc23b4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "262"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"106-tQhoH+yYIBbNE2UOGvU1poblMkY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 19:45:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"description\": \"Сжимайте мячик, чтобы снизить стресс от тем по бэкенду.\",\n    \"image\": {\n      \"fileName\": \"/images/Mithosis.png\",\n      \"originalName\": \"Mithosis.png\"\n    },\n    \"title\": \"Бэкенд-антистресс\",\n    \"category\": \"другое\",\n    \"price\": 1000\n  }"
+						},
+						{
+							"name": "BadRequest Body",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "Чтобы научиться правильно называть модификаторы, без этого не обойтись.",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "БЭМ-пилюлька",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "другое",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "1500",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product/6659c9d98ec8873e16cc23b4",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"6659c9d98ec8873e16cc23b4"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"statusCode\": 400,\r\n    \"error\": \"Bad Request\",\r\n    \"message\": \"Validation failed\",\r\n    \"validation\": {\r\n        \"body\": {\r\n            \"source\": \"body\",\r\n            \"keys\": [\r\n                \"title\"\r\n            ],\r\n            \"message\": \"Минимальная длина поля \\\"name\\\" - 2\"\r\n        }\r\n    }\r\n}"
+						},
+						{
+							"name": "BadRequest ID",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "Чтобы научиться правильно называть модификаторы, без этого не обойтись.",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "БЭМ-пилюлька",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "другое",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "1500",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product/6659c9d98ec8873e16cc23b4",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"6659c9d98ec8873e16cc23b4"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Передан не валидный ID товара\"\r\n}"
+						},
+						{
+							"name": "Conflict",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "Чтобы научиться правильно называть модификаторы, без этого не обойтись.",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "БЭМ-пилюлька",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "другое",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "1500",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product/6659c9d98ec8873e16cc23b4",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"6659c9d98ec8873e16cc23b4"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Товар с таким заголовком уже существует\"\n}"
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "Чтобы научиться правильно называть модификаторы, без этого не обойтись.",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "БЭМ-пилюлька",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "другое",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "1500",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product/6659c9d98ec8873e16cc23b4",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"6659c9d98ec8873e16cc23b4"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14-s+qz4i6AO6tDYm6PsMCkX6W2fzY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 19:46:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Необходима авторизация\"\n}"
+						},
+						{
+							"name": "NotFound",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "Чтобы научиться правильно называть модификаторы, без этого не обойтись.",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "БЭМ-пилюлька",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "другое",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "1500",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product/6659c9d98ec8873e16cc23b4",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"6659c9d98ec8873e16cc23b4"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14-s+qz4i6AO6tDYm6PsMCkX6W2fzY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 19:46:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Нет товара по заданному id\"\n}"
+						}
+					]
+				},
+				{
+					"name": "*Delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/product/6659c9d98ec8873e16cc23b4",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"6659c9d98ec8873e16cc23b4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/product/6659c9d98ec8873e16cc23b4",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"6659c9d98ec8873e16cc23b4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "262"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"106-tQhoH+yYIBbNE2UOGvU1poblMkY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 19:45:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6659c9d98ec8873e16cc23b4\",\n    \"title\": \"БЭМ-пилюлька\",\n    \"image\": \"/images/44c00b1b_pill.png\",\n    \"category\": \"другое\",\n    \"description\": \"Чтобы научиться правильно называть модификаторы, без этого не обойтись.\",\n    \"price\": 1500\n}"
+						},
+						{
+							"name": "BadRequest ID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/product/6659c9d98ec8873e16cc23b4",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"6659c9d98ec8873e16cc23b4"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Передан не валидный ID товара\"\r\n}"
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/product/6659c9d98ec8873e16cc23b4",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"6659c9d98ec8873e16cc23b4"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14-s+qz4i6AO6tDYm6PsMCkX6W2fzY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 19:46:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Необходима авторизация\"\n}"
+						},
+						{
+							"name": "NotFound",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/product/6659c9d98ec8873e16cc23b4",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"6659c9d98ec8873e16cc23b4"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14-s+qz4i6AO6tDYm6PsMCkX6W2fzY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 19:46:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Нет товара по заданному id\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Маршруты для работы с товарами\n\nМаршруты отмеченные \\* используются второй части проекта - **необязательной**"
+		},
+		{
+			"name": "*auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2723"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa3-y+wJfqV/fdEJPP9Np/+WEJUYAdk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 19:45:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"user\": {\n        \"name\": \"Василий\",\n        \"email\": \"admin@gmail.com\",\n        \"id\": \"6659ab833a2c61e55dfd160e\"\n    },\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjU5YWI4MzNhMmM2MWU1NWRmZDE2MGUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTcxNzE2MjgxMCwiZXhwIjoxNzE3MTY0MDEwfQ.VqvaHjMoliiTN5Vo4R8pqn_HKHo4dQ6jOPL6VTKHCbM\"\n}"
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Неправильные почта или пароль\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/auth/logout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/auth/logout",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2723"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa3-y+wJfqV/fdEJPP9Np/+WEJUYAdk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 19:45:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Refresh token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/auth/token",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/auth/token",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2723"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa3-y+wJfqV/fdEJPP9Np/+WEJUYAdk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 19:45:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"user\": {\n        \"name\": \"Василий\",\n        \"email\": \"admin@gmail.com\",\n        \"id\": \"6659ab833a2c61e55dfd160e\"\n    },\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjU5YWI4MzNhMmM2MWU1NWRmZDE2MGUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTcxNzE2MjgxMCwiZXhwIjoxNzE3MTY0MDEwfQ.VqvaHjMoliiTN5Vo4R8pqn_HKHo4dQ6jOPL6VTKHCbM\"\n}"
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/token",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"token"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Не валидный токен\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Василий\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Василий\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"user\": {\n        \"name\": \"Василий\",\n        \"email\": \"admin@gmail.com\",\n        \"id\": \"6659ab833a2c61e55dfd160e\"\n    },\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjU5YWI4MzNhMmM2MWU1NWRmZDE2MGUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTcxNzE2MjgxMCwiZXhwIjoxNzE3MTY0MDEwfQ.VqvaHjMoliiTN5Vo4R8pqn_HKHo4dQ6jOPL6VTKHCbM\"\n}"
+						},
+						{
+							"name": "Conflict",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Василий\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Пользователь с таким email уже существует\"\n}"
+						},
+						{
+							"name": "BadRequest",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Василий\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"user validation failed: email: Поле \\\"email\\\" должно быть заполнено\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Get current user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/auth/user",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/auth/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2723"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa3-y+wJfqV/fdEJPP9Np/+WEJUYAdk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 19:45:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"name\": \"Василий\",\n        \"email\": \"admin@gmail.com\",\n        \"id\": \"6659ab833a2c61e55dfd160e\"\n    },\n    \"success\": true\n}"
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/auth/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"user"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Необходима авторизация\" // \"Истек срок действия токена\"\r\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "Чтобы научиться правильно называть модификаторы, без этого не обойтись.",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "БЭМ-пилюлька",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "другое",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "1500",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product/6659c9d98ec8873e16cc23b4",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"6659c9d98ec8873e16cc23b4"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14-s+qz4i6AO6tDYm6PsMCkX6W2fzY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 19:46:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Пользователь по заданному id отсутствует в базе\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Маршруты связанные с пользователем"
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payment\": \"online\",\r\n    \"email\": \"test@test.ru\",\r\n    \"phone\": \"+71234567890\",\r\n    \"address\": \"Spb Vosstania 1\",\r\n    \"total\": 2200,\r\n    \"items\": [\r\n        \"662e97d0c2fed29cab5bf3db\",\r\n        \"662e97dec2fed29cab5bf3dd\"\r\n    \r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/order",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"payment\": \"online\",\r\n    \"email\": \"test@test.ru\",\r\n    \"phone\": \"+71234567890\",\r\n    \"address\": \"Spb Vosstania 1\",\r\n    \"total\": 2200,\r\n    \"items\": [\r\n        \"854cef69-976d-4c2a-a18c-2aa45046c390\",\r\n        \"c101ab44-ed99-4a54-990d-47aa2bb4e7d9\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/order",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"order"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3a-ukGUv0ohkG5SLpzugvC0khe3KJQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 20:04:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"3acb72f1-10d5-4991-9362-449e238e3ab0\",\n    \"total\": 2200\n}"
+						},
+						{
+							"name": "Product not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"payment\": \"online\",\r\n    \"email\": \"test@test.ru\",\r\n    \"phone\": \"+71234567890\",\r\n    \"address\": \"Spb Vosstania 1\",\r\n    \"total\": 2200,\r\n    \"items\": [\r\n        \"854cef69-976d-4c2a-a18c-2aa45046c390\",\r\n        \"c101ab44-ed99-4a54-990d-47aa2bb4e7d\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/order",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"order"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "82"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"52-JUt2bfLJfICMao2+gjMqyE5JOxw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 20:05:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Товар с id 662e97d0c2fed29cab5bf3d2 не найден\"\n}"
+						},
+						{
+							"name": "Wrong total",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"payment\": \"online\",\r\n    \"email\": \"test@test.ru\",\r\n    \"phone\": \"+71234567890\",\r\n    \"address\": \"Spb Vosstania 1\",\r\n    \"total\": 1200,\r\n    \"items\": [\r\n        \"854cef69-976d-4c2a-a18c-2aa45046c390\",\r\n        \"c101ab44-ed99-4a54-990d-47aa2bb4e7d9\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/order",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"order"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-mpjWGKPsYwI2hesfbH5QeqXknWE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 20:05:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Неверная сумма заказа\"\n}"
+						},
+						{
+							"name": "Wrong product buy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"payment\": \"online\",\r\n    \"email\": \"test@test.ru\",\r\n    \"phone\": \"+71234567890\",\r\n    \"address\": \"Spb Vosstania 1\",\r\n    \"total\": 1200,\r\n    \"items\": [\r\n        \"854cef69-976d-4c2a-a18c-2aa45046c390\",\r\n        \"c101ab44-ed99-4a54-990d-47aa2bb4e7d9\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/order",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"order"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-mpjWGKPsYwI2hesfbH5QeqXknWE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 20:05:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Товар с id 662e97edc2fed29cab5bf3df не продается\"\n}"
+						},
+						{
+							"name": "Wrong id product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"payment\": \"online\",\r\n    \"email\": \"test@test.ru\",\r\n    \"phone\": \"+71234567890\",\r\n    \"address\": \"Spb Vosstania 1\",\r\n    \"total\": 1200,\r\n    \"items\": [\r\n        \"854cef69-976d-4c2a-a18c-2aa45046c390\",\r\n        \"c101ab44-ed99-4a54-990d-47aa2bb4e7d9\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/order",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"order"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-mpjWGKPsYwI2hesfbH5QeqXknWE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 20:05:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Неверная сумма заказа\"\n}"
+						},
+						{
+							"name": "BadRequest data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"payment\": \"online\",\r\n    \"email\": \"test@test.ru\",\r\n    \"phone\": \"+71234567890\",\r\n    \"total\": 2200,\r\n    \"items\": [\r\n        \"854cef69-976d-4c2a-a18c-2aa45046c390\",\r\n        \"c101ab44-ed99-4a54-990d-47aa2bb4e7d9\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/order",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"order"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28-ZSb1dC6GSyDT0zlpvtUDOGWyTOw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 20:05:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 400,\n    \"error\": \"Bad Request\",\n    \"message\": \"Validation failed\",\n    \"validation\": {\n        \"body\": {\n            \"source\": \"body\",\n            \"keys\": [\n                \"address\"\n            ],\n            \"message\": \"\\\"address\\\" is required\"\n        }\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "Маршрут для создания заказа"
+		},
+		{
+			"name": "*upload",
+			"item": [
+				{
+					"name": "*Upload file",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "postman-cloud:///1ef1f421-6e62-49a0-962a-797749256745"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/upload",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"upload"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "Чтобы научиться правильно называть модификаторы, без этого не обойтись.",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "БЭМ-пилюлька",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "category",
+											"value": "другое",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "1500",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "262"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"106-tQhoH+yYIBbNE2UOGvU1poblMkY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 19:45:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"fileName\": \"/images/5_Dots.png\",\n    \"originalName\": \"5_Dots.png\"\n}"
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "Чтобы научиться правильно называть модификаторы, без этого не обойтись.",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "БЭМ-пилюлька",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "другое",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "1500",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14-s+qz4i6AO6tDYm6PsMCkX6W2fzY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Jan 2024 19:46:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Необходима авторизация\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "accessToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjU5YWI4MzNhMmM2MWU1NWRmZDE2MGUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTcxNzQwMjU4NywiZXhwIjoxNzE3NDAzNzg3fQ.jHQZKXIElwMdCUak6VQuFvqUdg-J3X8--6Cx8drqB7Y",
+			"type": "string"
+		}
+	]
+}
