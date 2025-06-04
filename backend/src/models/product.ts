@@ -8,11 +8,11 @@ interface IImage {
 const imageSchema = new mongoose.Schema<IImage>({
   fileName: {
     type: String,
-    required: true,
+    required: [true, 'Поле "image" должно быть заполнено'],
   },
   originalName: {
     type: String,
-    required: true,
+    required: [true, 'Поле "originalName" должно быть заполнено'],
   },
 });
 
@@ -27,61 +27,25 @@ interface IProduct {
 const productSchema = new mongoose.Schema<IProduct>({
   title: {
     type: String,
-    required: true,
-    minlength: 2,
-    maxlength: 30,
+    required: [true, 'Поле "title" должно быть заполнено'],
+    minlength: [2, 'Минимальная длина поля "title" - 2'],
+    maxlength: [30, 'Максимальная длина поля "title" - 30'],
     unique: true,
   },
   image: imageSchema,
   category: {
     type: String,
-    required: true,
+    required: [true, 'Поле "category" должно быть заполнено'],
   },
   description: {
     type: String,
+    required: [true, 'Поле "description" должно быть заполнено'],
   },
   price: {
     type: Number,
+    required: [true, 'Поле "price" должно быть заполнено'],
   },
 });
 
-// interface IOrder {
-//   payment: string;
-//   email: string;
-//   phone: string;
-//   address: string;
-//   total: number;
-//   items: string[];
-// }
-
-// const orderSchema = new mongoose.Schema<IOrder>({
-//   payment: {
-//     type: String,
-//     enum: ['card', 'online'],
-//     required: true,
-//   },
-//   email: {
-//     type: String,
-//     required: true,
-//   },
-//   phone: {
-//     type: String,
-//     required: true,
-//   },
-//   address: {
-//     type: String,
-//     required: true,
-//   },
-//   total: {
-//     type: Number,
-//     required: true,
-//   },
-//   items: [{
-//     type: String,
-//   }],
-
-// });
-
-// export mongoose.model<IOrder>('order', orderSchema);
 // создаём модель и экспортируем её
 export default mongoose.model<IProduct>('product', productSchema);
