@@ -24,7 +24,6 @@ interface IProduct {
   price: number;
 }
 
-// опишем схему:
 const productSchema = new mongoose.Schema<IProduct>({
   title: {
     type: String,
@@ -46,5 +45,43 @@ const productSchema = new mongoose.Schema<IProduct>({
   },
 });
 
+// interface IOrder {
+//   payment: string;
+//   email: string;
+//   phone: string;
+//   address: string;
+//   total: number;
+//   items: string[];
+// }
+
+// const orderSchema = new mongoose.Schema<IOrder>({
+//   payment: {
+//     type: String,
+//     enum: ['card', 'online'],
+//     required: true,
+//   },
+//   email: {
+//     type: String,
+//     required: true,
+//   },
+//   phone: {
+//     type: String,
+//     required: true,
+//   },
+//   address: {
+//     type: String,
+//     required: true,
+//   },
+//   total: {
+//     type: Number,
+//     required: true,
+//   },
+//   items: [{
+//     type: String,
+//   }],
+
+// });
+
+// export mongoose.model<IOrder>('order', orderSchema);
 // создаём модель и экспортируем её
 export default mongoose.model<IProduct>('product', productSchema);
