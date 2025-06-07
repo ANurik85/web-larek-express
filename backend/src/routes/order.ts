@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import createOrder from '../controllers/order';
 
-const orderRouter = Router();
+export const orderRouter = Router();
 
 orderRouter.post('/order', createOrder);
 

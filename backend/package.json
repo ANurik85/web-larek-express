@@ -31,7 +31,9 @@
     "celebrate": "^15.0.3",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "express-winston": "^4.2.0",
     "mongoose": "^8.15.1",
-    "validator": "^13.11.0"
+    "validator": "^13.11.0",
+    "winston": "^3.17.0"
   }
 }

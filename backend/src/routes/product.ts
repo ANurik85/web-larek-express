@@ -7,7 +7,7 @@ import {
   validateObjId,
 } from '../middlewares/validation';
 
-const productRouter = Router();
+export const productRouter = Router();
 
 productRouter.get('/product', getProduct);
 productRouter.post('/product', /* auth, */ validateProductBody, createProduct);
