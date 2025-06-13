@@ -6,6 +6,7 @@ import mongoose from 'mongoose';
 import { productRouter, orderRouter } from './routes';
 import errorHandler from './middlewares/error-handler';
 import NotFoundError from './errors/not-found-error';
+import { authRoutes } from './routes/auth';
 
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
@@ -21,6 +22,7 @@ app.use(requestLogger); // логгер запросов до роутов
 
 app.use(productRouter);
 app.use(orderRouter);
+app.use('/auth', authRoutes);
 
 app.use((_req, _res, next) => next(new NotFoundError('Маршрут не найден')));
 app.use(errorLogger); // логгер ошибок после роутов
