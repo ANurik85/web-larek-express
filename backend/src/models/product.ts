@@ -44,6 +44,7 @@ const productSchema = new mongoose.Schema<IProduct>({
   price: {
     type: Number,
     required: [true, 'Поле "price" должно быть заполнено'],
+    default: null,
   },
 });
 

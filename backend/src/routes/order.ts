@@ -3,6 +3,6 @@ import createOrder from '../controllers/order';
 
 export const orderRouter = Router();
 
-orderRouter.post('/order', createOrder);
+orderRouter.post('/', createOrder);
 
 export default orderRouter;
