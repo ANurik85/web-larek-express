@@ -1,6 +1,8 @@
-import mongoose from 'mongoose';
+import mongoose, { Document, Model } from 'mongoose';
+import { unlink } from 'fs/promises';
+import { join } from 'path';
 
-interface IImage {
+interface IImage extends Document {
   fileName: string,
   originalName: string;
 }
@@ -16,7 +18,7 @@ const imageSchema = new mongoose.Schema<IImage>({
   },
 });
 
-interface IProduct {
+interface IProduct extends Document {
   title: string;
   image: IImage;
   category: string;
@@ -48,5 +50,24 @@ const productSchema = new mongoose.Schema<IProduct>({
   },
 });
 
-// создаём модель и экспортируем её
-export default mongoose.model<IProduct>('product', productSchema);
+productSchema.post<IProduct>('deleteOne', { document: true, query: false }, async (doc, next) => {
+  try {
+    if (doc.image) {
+      const imagePath = join(__dirname, '../public', doc.image.fileName);
+      try {
+        await unlink(imagePath);
+      } catch (err) {
+        if (typeof err === 'object' && err !== null && 'code' in err && (err as any).code === 'ENOENT') {
+          return next();
+        }
+      }
+    }
+    return next();
+  } catch (error) {
+    return next(error as Error);
+  }
+});
+
+const Product: Model<IProduct> = mongoose.model<IProduct>('Product', productSchema);
+
+export default Product;
