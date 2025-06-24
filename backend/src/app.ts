@@ -1,31 +1,40 @@
-/* eslint-disable no-console */
 import path from 'path';
-import express from 'express';
+import express, { json } from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import { productRouter, orderRouter } from './routes';
+import cookieParser from 'cookie-parser';
+import { errors } from 'celebrate';
+import routes from './routes';
 import errorHandler from './middlewares/error-handler';
-import NotFoundError from './errors/not-found-error';
-import { authRoutes } from './routes/auth';
+import { startCleanupSchedule } from './utils/cleanupTempFiles';
 
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const app = express();
 mongoose.connect('mongodb://127.0.0.1:27017/weblarek');
 
-app.use(cors());
+startCleanupSchedule();
 
+const corsOptions = {
+  origin: 'http://localhost:5173',
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(requestLogger); // логгер запросов до роутов
+app.use(requestLogger);
+app.use(json());
+app.use(cookieParser());
+app.use(routes);
 
-app.use(productRouter);
-app.use(orderRouter);
-app.use('/auth', authRoutes);
-
-app.use((_req, _res, next) => next(new NotFoundError('Маршрут не найден')));
-app.use(errorLogger); // логгер ошибок после роутов
+app.use(errorLogger);
+app.use(errors());
 app.use(errorHandler);
 
+// eslint-disable-next-line no-console
 app.listen(3000, () => { console.log('Server is running on http://localhost:3000'); });

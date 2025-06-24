@@ -3,7 +3,10 @@ import { celebrate, Joi, Segments } from 'celebrate';
 export const validateProductBody = celebrate({
   [Segments.BODY]: Joi.object().keys({
     title: Joi.string().min(2).max(30).required(),
-    image: Joi.string().uri().required(),
+    image: Joi.object().keys({
+      fileName: Joi.string().required(),
+      originalName: Joi.string().required(),
+    }).required(),
     category: Joi.string().required(),
     description: Joi.string().required(),
     price: Joi.number().required(),
@@ -13,7 +16,10 @@ export const validateProductBody = celebrate({
 export const validateProductUpdateBody = celebrate({
   [Segments.BODY]: Joi.object().keys({
     title: Joi.string().min(2).max(30),
-    image: Joi.string().uri(),
+    image: Joi.object().keys({
+      fileName: Joi.string().required(),
+      originalName: Joi.string().required(),
+    }),
     category: Joi.string(),
     description: Joi.string(),
     price: Joi.number(),
